@@ -140,10 +140,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 let options = [
-    ['Global Events', '/events'],
-    ['Basket Of Benefits', '/benefits'],
-    ['Internal Events', '/ievents'],
-    ['Feedback', '/feedback']
+    ['Best Sellers', '/home'],
+    ['New Releases', '/home'],
+    ["Men's Fashion", '/home'],
+    ["Women's Fashion", '/home'],
+    ["Kid's's Fashion", '/home'],
+    ["Help", "/home"],
+    ["Customer Services", "/home"]
 ]
 
 export default function Navbar(props) {
@@ -268,9 +271,11 @@ export default function Navbar(props) {
                     >
                         <MenuIcon style={{ color: 'white' }} />
                     </IconButton>
-                    <Typography variant="h6" noWrap >
-                        Visual Search
-                    </Typography>
+                    <Link to="/home" style={{color: 'white'}}>
+                        <Typography variant="h6" noWrap >
+                            Visual Search
+                        </Typography>
+                    </Link>
                     <div className={classes.search}>
                         <input accept="image/*" id="icon-button-file" type="file" name="file" onChange={handleOnchange} style={{display: 'none'}}/>
                         <label htmlFor="icon-button-file">
